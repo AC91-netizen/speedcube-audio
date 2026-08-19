@@ -2,31 +2,42 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Tactile Speedcube Audio Tutorial</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 <main>
 
+
     <header>
+
         <h1>Tactile Speedcube</h1>
+
         <p>Accessible Audio Tutorial</p>
+
     </header>
 
 
-    <!-- AUDIO PLAYER -->
+
+    <!-- AUDIO CONTROLS -->
 
     <section aria-labelledby="player-heading">
 
         <h2 id="player-heading">
             Audio controls
         </h2>
+
 
         <audio
             id="audioPlayer"
@@ -40,15 +51,21 @@
         </audio>
 
 
+
+        <!-- PLAY -->
+
         <button
             type="button"
             id="playButton"
-            aria-label="Play the speedcube tutorial">
+            aria-label="Play the speedcube tutorial after a five second delay">
 
             PLAY AUDIO
 
         </button>
 
+
+
+        <!-- PAUSE -->
 
         <button
             type="button"
@@ -60,7 +77,11 @@
         </button>
 
 
+
+        <!-- REWIND / FORWARD -->
+
         <div class="small-controls">
+
 
             <button
                 type="button"
@@ -81,8 +102,126 @@
 
             </button>
 
+
         </div>
 
+
+
+        <!-- PLAYBACK SPEED -->
+
+        <section
+            aria-labelledby="speed-heading"
+            class="speed-section">
+
+
+            <h2 id="speed-heading">
+                Playback speed
+            </h2>
+
+
+            <p>
+                Choose how fast the tutorial is spoken.
+            </p>
+
+
+            <div class="speed-buttons">
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="0.5"
+                    aria-label="Playback speed half speed">
+
+                    0.5 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="0.75"
+                    aria-label="Playback speed three quarters speed">
+
+                    0.75 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button selected"
+                    data-speed="1"
+                    aria-label="Playback speed normal speed">
+
+                    1 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="1.25"
+                    aria-label="Playback speed one and a quarter times">
+
+                    1.25 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="1.5"
+                    aria-label="Playback speed one and a half times">
+
+                    1.5 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="1.75"
+                    aria-label="Playback speed one and three quarters times">
+
+                    1.75 times
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="speed-button"
+                    data-speed="2"
+                    aria-label="Playback speed double speed">
+
+                    2 times
+
+                </button>
+
+
+            </div>
+
+
+            <p
+                id="speedStatus"
+                role="status"
+                aria-live="polite">
+
+                Playback speed is normal.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- STATUS -->
 
         <p
             id="status"
@@ -93,195 +232,216 @@
 
         </p>
 
+
     </section>
+
 
 
     <!-- CHAPTERS -->
 
     <section aria-labelledby="chapters-heading">
 
+
         <h2 id="chapters-heading">
             Tutorial chapters
         </h2>
 
+
         <p>
-            Select a chapter to start the audio from that point.
+            Select a chapter to jump to that section.
+            The audio will begin five seconds after you select a chapter.
         </p>
 
 
         <div class="chapters">
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="0"
-                aria-label="Chapter 0, Introduction, starting at zero minutes">
+                aria-label="Chapter 0, Introduction, starting at zero minutes. Audio will start after five seconds.">
 
                 Chapter 0 — Introduction
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="36"
-                aria-label="Chapter 1, Learning Your Cube, starting at 36 seconds">
+                aria-label="Chapter 1, Learning Your Cube, starting at 36 seconds. Audio will start after five seconds.">
 
                 Chapter 1 — Learning Your Cube
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="92"
-                aria-label="Chapter 2, Finding the Starting Position, starting at 1 minute 32 seconds">
+                aria-label="Chapter 2, Finding the Starting Position, starting at 1 minute 32 seconds. Audio will start after five seconds.">
 
                 Chapter 2 — Finding the Starting Position
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="130"
-                aria-label="Chapter 3, Understanding a Turn, starting at 2 minutes 10 seconds">
+                aria-label="Chapter 3, Understanding a Turn, starting at 2 minutes 10 seconds. Audio will start after five seconds.">
 
                 Chapter 3 — Understanding a Turn
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="181"
-                aria-label="Chapter 4, The First Cross, starting at 3 minutes 1 second">
+                aria-label="Chapter 4, The First Cross, starting at 3 minutes 1 second. Audio will start after five seconds.">
 
                 Chapter 4 — The First Cross
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="250"
-                aria-label="Chapter 5, Making the Circle Cross, starting at 4 minutes 10 seconds">
+                aria-label="Chapter 5, Making the Circle Cross, starting at 4 minutes 10 seconds. Audio will start after five seconds.">
 
                 Chapter 5 — Making the Circle Cross
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="334"
-                aria-label="Chapter 6, Solving the Circle Corners, starting at 5 minutes 34 seconds">
+                aria-label="Chapter 6, Solving the Circle Corners, starting at 5 minutes 34 seconds. Audio will start after five seconds.">
 
                 Chapter 6 — Solving the Circle Corners
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="410"
-                aria-label="Chapter 7, The Middle Layer, starting at 6 minutes 50 seconds">
+                aria-label="Chapter 7, The Middle Layer, starting at 6 minutes 50 seconds. Audio will start after five seconds.">
 
                 Chapter 7 — The Middle Layer
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="518"
-                aria-label="Chapter 8, The Diagonal Face, starting at 8 minutes 38 seconds">
+                aria-label="Chapter 8, The Diagonal Face, starting at 8 minutes 38 seconds. Audio will start after five seconds.">
 
                 Chapter 8 — The Diagonal Face
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="552"
-                aria-label="Chapter 9, Creating the Diagonal Cross, starting at 9 minutes 12 seconds">
+                aria-label="Chapter 9, Creating the Diagonal Cross, starting at 9 minutes 12 seconds. Audio will start after five seconds.">
 
                 Chapter 9 — Creating the Diagonal Cross
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="593"
-                aria-label="Chapter 10, Positioning the Diagonal Corners, starting at 9 minutes 53 seconds">
+                aria-label="Chapter 10, Positioning the Diagonal Corners, starting at 9 minutes 53 seconds. Audio will start after five seconds.">
 
                 Chapter 10 — Positioning the Diagonal Corners
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="645"
-                aria-label="Chapter 11, Turning the Final Corners, starting at 10 minutes 45 seconds">
+                aria-label="Chapter 11, Turning the Final Corners, starting at 10 minutes 45 seconds. Audio will start after five seconds.">
 
                 Chapter 11 — Turning the Final Corners
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="708"
-                aria-label="Chapter 12, The Final Edges, starting at 11 minutes 48 seconds">
+                aria-label="Chapter 12, The Final Edges, starting at 11 minutes 48 seconds. Audio will start after five seconds.">
 
                 Chapter 12 — The Final Edges
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="758"
-                aria-label="Chapter 13, Checking the Speedcube, starting at 12 minutes 38 seconds">
+                aria-label="Chapter 13, Checking the Speedcube, starting at 12 minutes 38 seconds. Audio will start after five seconds.">
 
                 Chapter 13 — Checking the Speedcube
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="812"
-                aria-label="Chapter 14, If You Lose Your Orientation, starting at 13 minutes 32 seconds">
+                aria-label="Chapter 14, If You Lose Your Orientation, starting at 13 minutes 32 seconds. Audio will start after five seconds.">
 
                 Chapter 14 — If You Lose Your Orientation
 
             </button>
 
 
+
             <button
                 type="button"
                 class="chapter"
                 data-time="849"
-                aria-label="Chapter 15, Final Reminder, starting at 14 minutes 9 seconds">
+                aria-label="Chapter 15, Final Reminder, starting at 14 minutes 9 seconds. Audio will start after five seconds.">
 
                 Chapter 15 — Final Reminder
 
@@ -292,112 +452,423 @@
 
     </section>
 
+
 </main>
+
 
 
 <script>
 
-const audio = document.getElementById("audioPlayer");
 
-const playButton = document.getElementById("playButton");
+/* ----------------------------- */
+/* AUDIO ELEMENT */
+/* ----------------------------- */
 
-const pauseButton = document.getElementById("pauseButton");
-
-const rewindButton = document.getElementById("rewindButton");
-
-const forwardButton = document.getElementById("forwardButton");
-
-const status = document.getElementById("status");
-
-const chapterButtons = document.querySelectorAll(".chapter");
+const audio =
+    document.getElementById("audioPlayer");
 
 
+/* ----------------------------- */
+/* MAIN BUTTONS */
+/* ----------------------------- */
 
-/* PLAY */
+const playButton =
+    document.getElementById("playButton");
 
-playButton.addEventListener("click", function() {
+const pauseButton =
+    document.getElementById("pauseButton");
 
-    audio.play();
+const rewindButton =
+    document.getElementById("rewindButton");
 
-    status.textContent = "Playing the speedcube tutorial.";
-
-});
-
-
-
-/* PAUSE */
-
-pauseButton.addEventListener("click", function() {
-
-    audio.pause();
-
-    status.textContent = "Audio paused.";
-
-});
+const forwardButton =
+    document.getElementById("forwardButton");
 
 
+/* ----------------------------- */
+/* STATUS */
+/* ----------------------------- */
 
-/* REWIND 10 SECONDS */
+const status =
+    document.getElementById("status");
 
-rewindButton.addEventListener("click", function() {
-
-    audio.currentTime = Math.max(
-        0,
-        audio.currentTime - 10
-    );
-
-    status.textContent = "Rewound 10 seconds.";
-
-});
+const speedStatus =
+    document.getElementById("speedStatus");
 
 
+/* ----------------------------- */
+/* SPEED BUTTONS */
+/* ----------------------------- */
 
-/* FAST FORWARD 10 SECONDS */
-
-forwardButton.addEventListener("click", function() {
-
-    audio.currentTime = Math.min(
-        audio.duration || Infinity,
-        audio.currentTime + 10
-    );
-
-    status.textContent = "Fast forwarded 10 seconds.";
-
-});
+const speedButtons =
+    document.querySelectorAll(".speed-button");
 
 
-
+/* ----------------------------- */
 /* CHAPTER BUTTONS */
+/* ----------------------------- */
 
-chapterButtons.forEach(function(button) {
+const chapterButtons =
+    document.querySelectorAll(".chapter");
 
-    button.addEventListener("click", function() {
 
-        const time = Number(
-            button.getAttribute("data-time")
-        );
+/* ----------------------------- */
+/* FIVE SECOND DELAY */
+/* ----------------------------- */
 
-        audio.currentTime = time;
+let startTimer = null;
+
+
+/* ----------------------------- */
+/* PLAY AFTER FIVE SECONDS */
+/* ----------------------------- */
+
+function playAfterDelay(message) {
+
+
+    /* Cancel any existing timer */
+
+    if (startTimer !== null) {
+
+        clearTimeout(startTimer);
+
+    }
+
+
+    status.textContent =
+        message + " Audio will start in five seconds.";
+
+
+    startTimer = setTimeout(function() {
 
         audio.play();
 
         status.textContent =
-            button.getAttribute("aria-label");
+            "Playing.";
 
-    });
+        startTimer = null;
 
-});
+    }, 5000);
+
+}
 
 
+/* ----------------------------- */
+/* PLAY BUTTON */
+/* ----------------------------- */
 
+playButton.addEventListener(
+    "click",
+    function() {
+
+        playAfterDelay(
+            "Starting the speedcube tutorial."
+        );
+
+    }
+);
+
+
+/* ----------------------------- */
+/* PAUSE BUTTON */
+/* ----------------------------- */
+
+pauseButton.addEventListener(
+    "click",
+    function() {
+
+
+        if (startTimer !== null) {
+
+            clearTimeout(startTimer);
+
+            startTimer = null;
+
+        }
+
+
+        audio.pause();
+
+
+        status.textContent =
+            "Audio paused.";
+
+    }
+);
+
+
+/* ----------------------------- */
+/* REWIND */
+/* ----------------------------- */
+
+rewindButton.addEventListener(
+    "click",
+    function() {
+
+
+        if (startTimer !== null) {
+
+            clearTimeout(startTimer);
+
+            startTimer = null;
+
+        }
+
+
+        audio.currentTime =
+            Math.max(
+                0,
+                audio.currentTime - 10
+            );
+
+
+        status.textContent =
+            "Rewound 10 seconds.";
+
+    }
+);
+
+
+/* ----------------------------- */
+/* FAST FORWARD */
+/* ----------------------------- */
+
+forwardButton.addEventListener(
+    "click",
+    function() {
+
+
+        if (startTimer !== null) {
+
+            clearTimeout(startTimer);
+
+            startTimer = null;
+
+        }
+
+
+        audio.currentTime =
+            Math.min(
+                audio.duration || Infinity,
+                audio.currentTime + 10
+            );
+
+
+        status.textContent =
+            "Fast forwarded 10 seconds.";
+
+    }
+);
+
+
+/* ----------------------------- */
+/* PLAYBACK SPEED */
+/* ----------------------------- */
+
+speedButtons.forEach(
+    function(button) {
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                const speed =
+                    Number(
+                        button.getAttribute(
+                            "data-speed"
+                        )
+                    );
+
+
+                audio.playbackRate =
+                    speed;
+
+
+                /* Remove selected state */
+
+                speedButtons.forEach(
+                    function(otherButton) {
+
+                        otherButton.classList.remove(
+                            "selected"
+                        );
+
+                    }
+                );
+
+
+                /* Mark current speed */
+
+                button.classList.add(
+                    "selected"
+                );
+
+
+                let spokenSpeed;
+
+
+                if (speed === 0.5) {
+
+                    spokenSpeed =
+                        "half speed";
+
+                }
+
+                else if (speed === 0.75) {
+
+                    spokenSpeed =
+                        "three quarters speed";
+
+                }
+
+                else if (speed === 1) {
+
+                    spokenSpeed =
+                        "normal speed";
+
+                }
+
+                else if (speed === 1.25) {
+
+                    spokenSpeed =
+                        "one and a quarter speed";
+
+                }
+
+                else if (speed === 1.5) {
+
+                    spokenSpeed =
+                        "one and a half speed";
+
+                }
+
+                else if (speed === 1.75) {
+
+                    spokenSpeed =
+                        "one and three quarters speed";
+
+                }
+
+                else if (speed === 2) {
+
+                    spokenSpeed =
+                        "double speed";
+
+                }
+
+
+                speedStatus.textContent =
+                    "Playback speed is " +
+                    spokenSpeed + ".";
+
+
+            }
+        );
+
+    }
+);
+
+
+/* ----------------------------- */
+/* CHAPTER BUTTONS */
+/* ----------------------------- */
+
+chapterButtons.forEach(
+    function(button) {
+
+
+        button.addEventListener(
+            "click",
+            function() {
+
+
+                const time =
+                    Number(
+                        button.getAttribute(
+                            "data-time"
+                        )
+                    );
+
+
+                /* Cancel existing timer */
+
+                if (startTimer !== null) {
+
+                    clearTimeout(startTimer);
+
+                    startTimer = null;
+
+                }
+
+
+                /* Move to chapter */
+
+                audio.currentTime =
+                    time;
+
+
+                /* Read the chapter name */
+
+                const chapterName =
+                    button.textContent
+                    .replace(
+                        "Chapter",
+                        ""
+                    )
+                    .trim();
+
+
+                status.textContent =
+                    chapterName +
+                    ". Audio will start in five seconds.";
+
+
+                /* Wait five seconds */
+
+                startTimer =
+                    setTimeout(
+                        function() {
+
+
+                            audio.play();
+
+
+                            status.textContent =
+                                "Playing " +
+                                chapterName +
+                                ".";
+
+
+                            startTimer = null;
+
+
+                        },
+                        5000
+                    );
+
+            }
+        );
+
+    }
+);
+
+
+/* ----------------------------- */
 /* AUDIO FINISHED */
+/* ----------------------------- */
 
-audio.addEventListener("ended", function() {
+audio.addEventListener(
+    "ended",
+    function() {
 
-    status.textContent =
-        "The speedcube tutorial has finished.";
+        status.textContent =
+            "The speedcube tutorial has finished.";
 
-});
+    }
+);
+
 
 </script>
 
