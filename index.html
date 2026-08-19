@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Tactile Speedcube Audio Tutorial</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main>
+
+    <header>
+        <h1>Tactile Speedcube</h1>
+        <p class="subtitle">Audio Tutorial</p>
+    </header>
+
+    <section class="instructions" aria-labelledby="instructions-heading">
+
+        <h2 id="instructions-heading">Audio tutorial</h2>
+
+        <p>
+            This tutorial is designed to teach you how to solve the
+            speedcube using touch alone.
+        </p>
+
+        <p>
+            Find the button below and activate it to begin listening.
+        </p>
+
+    </section>
+
+    <section class="player" aria-label="Audio player">
+
+        <audio id="audioPlayer" controls preload="metadata">
+            <source src="speedcube-tutorial.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+        </audio>
+
+        <button id="playButton" type="button">
+            PLAY AUDIO
+        </button>
+
+        <button id="pauseButton" type="button">
+            PAUSE AUDIO
+        </button>
+
+    </section>
+
+    <section class="chapters" aria-labelledby="chapters-heading">
+
+        <h2 id="chapters-heading">Tutorial chapters</h2>
+
+        <p>
+            The complete tutorial is contained in the audio recording.
+            Use the audio player's controls to pause, rewind or continue.
+        </p>
+
+        <ul>
+            <li>Introduction</li>
+            <li>Learning the tactile faces</li>
+            <li>Finding the starting position</li>
+            <li>Understanding a turn</li>
+            <li>The first cross</li>
+            <li>Making the circle cross</li>
+            <li>Solving the circle corners</li>
+            <li>The middle layer</li>
+            <li>The diagonal face</li>
+            <li>Creating the diagonal cross</li>
+            <li>Positioning the diagonal corners</li>
+            <li>Turning the final corners</li>
+            <li>The final edges</li>
+            <li>Checking the speedcube</li>
+            <li>If you lose your orientation</li>
+            <li>Final reminder</li>
+        </ul>
+
+    </section>
+
+</main>
+
+<script>
+
+const audio = document.getElementById("audioPlayer");
+
+const playButton = document.getElementById("playButton");
+
+const pauseButton = document.getElementById("pauseButton");
+
+playButton.addEventListener("click", function() {
+    audio.play();
+});
+
+pauseButton.addEventListener("click", function() {
+    audio.pause();
+});
+
+</script>
+
+</body>
+</html>
