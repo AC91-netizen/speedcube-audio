@@ -1,16 +1,29 @@
+/* =========================================================
+   TACTILE SPEEDCUBE AUDIO TUTORIAL
+   Accessible design for Samsung Internet + TalkBack
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   BASIC PAGE SETTINGS
+   --------------------------------------------------------- */
+
 * {
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 20px;
 }
+
 
 body {
     margin: 0;
     padding: 0;
 
     background: #111111;
+
     color: #ffffff;
 
     font-family:
@@ -21,37 +34,96 @@ body {
     line-height: 1.6;
 }
 
+
+/* ---------------------------------------------------------
+   MAIN PAGE
+   --------------------------------------------------------- */
+
 main {
+    width: 100%;
+
     max-width: 900px;
-    margin: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
     padding: 25px 20px 60px;
 }
 
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
 header {
     text-align: center;
+
+    padding-top: 10px;
+
     padding-bottom: 25px;
 }
 
+
 h1 {
-    font-size: 2.3rem;
+    margin-top: 0;
+
     margin-bottom: 5px;
+
+    font-size: 2.3rem;
+
+    line-height: 1.2;
 }
 
-h2 {
-    font-size: 1.6rem;
+
+header p {
+    margin-top: 10px;
+
+    font-size: 1.25rem;
 }
+
+
+/* ---------------------------------------------------------
+   HEADINGS
+   --------------------------------------------------------- */
+
+h2 {
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    font-size: 1.6rem;
+
+    line-height: 1.3;
+}
+
+
+/* ---------------------------------------------------------
+   SECTIONS
+   --------------------------------------------------------- */
 
 section {
     margin-bottom: 35px;
 }
 
+
+/* ---------------------------------------------------------
+   AUDIO PLAYER
+   --------------------------------------------------------- */
+
 audio {
+    display: block;
+
     width: 100%;
-    margin: 15px 0 25px;
+
+    margin-top: 15px;
+
+    margin-bottom: 25px;
 }
 
 
-/* MAIN PLAY AND PAUSE BUTTONS */
+/* ---------------------------------------------------------
+   ALL BUTTONS
+   --------------------------------------------------------- */
 
 button {
     display: block;
@@ -60,7 +132,9 @@ button {
 
     min-height: 100px;
 
-    margin: 15px 0;
+    margin-top: 15px;
+
+    margin-bottom: 15px;
 
     padding: 20px;
 
@@ -72,41 +146,29 @@ button {
 
     color: #ffffff;
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     font-size: 1.5rem;
 
     font-weight: bold;
 
+    line-height: 1.3;
+
+    text-align: center;
+
     cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 
-/* REWIND AND FAST FORWARD */
-
-.small-controls {
-    display: flex;
-    gap: 15px;
-}
-
-.small-controls button {
-    min-height: 80px;
-    font-size: 1.1rem;
-}
-
-
-/* CHAPTER BUTTONS */
-
-.chapter {
-    min-height: 75px;
-
-    text-align: left;
-
-    font-size: 1.15rem;
-
-    padding-left: 25px;
-}
-
-
-/* TALKBACK / KEYBOARD FOCUS */
+/* ---------------------------------------------------------
+   BUTTON FOCUS
+   IMPORTANT FOR TALKBACK / KEYBOARD USERS
+   --------------------------------------------------------- */
 
 button:focus {
     outline: 6px solid #ffff00;
@@ -119,7 +181,9 @@ button:focus {
 }
 
 
-/* MOUSE / TOUCH HOVER */
+/* ---------------------------------------------------------
+   BUTTON HOVER
+   --------------------------------------------------------- */
 
 button:hover {
     background: #ffffff;
@@ -128,10 +192,120 @@ button:hover {
 }
 
 
-/* STATUS MESSAGE */
+/* ---------------------------------------------------------
+   PLAY / PAUSE
+   --------------------------------------------------------- */
 
-#status {
-    padding: 20px;
+#playButton,
+#pauseButton {
+    min-height: 110px;
+
+    font-size: 1.7rem;
+}
+
+
+/* ---------------------------------------------------------
+   REWIND / FAST FORWARD
+   --------------------------------------------------------- */
+
+.small-controls {
+    display: flex;
+
+    gap: 15px;
+
+    width: 100%;
+}
+
+
+.small-controls button {
+    flex: 1;
+
+    min-height: 90px;
+
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+
+    font-size: 1.1rem;
+}
+
+
+/* ---------------------------------------------------------
+   PLAYBACK SPEED SECTION
+   --------------------------------------------------------- */
+
+.speed-section {
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+}
+
+
+.speed-section p {
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   SPEED BUTTON GRID
+   --------------------------------------------------------- */
+
+.speed-buttons {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   SPEED BUTTONS
+   --------------------------------------------------------- */
+
+.speed-button {
+    width: 100%;
+
+    min-height: 80px;
+
+    margin: 0;
+
+    padding: 15px;
+
+    font-size: 1.1rem;
+
+    border-radius: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTED SPEED
+   --------------------------------------------------------- */
+
+.speed-button.selected {
+    background: #ffffff;
+
+    color: #000000;
+
+    border: 6px solid #ffff00;
+}
+
+
+/* ---------------------------------------------------------
+   SPEED STATUS
+   --------------------------------------------------------- */
+
+#speedStatus {
+    margin-top: 20px;
+
+    margin-bottom: 0;
+
+    padding: 15px;
 
     border: 2px solid #ffffff;
 
@@ -140,36 +314,249 @@ button:hover {
     text-align: center;
 
     font-weight: bold;
+
+    line-height: 1.5;
 }
 
 
-/* MOBILE PHONES */
+/* ---------------------------------------------------------
+   GENERAL AUDIO STATUS
+   --------------------------------------------------------- */
+
+#status {
+    margin-top: 25px;
+
+    margin-bottom: 0;
+
+    padding: 20px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 10px;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   CHAPTER SECTION
+   --------------------------------------------------------- */
+
+.chapters {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   CHAPTER BUTTONS
+   --------------------------------------------------------- */
+
+.chapter {
+    min-height: 85px;
+
+    margin-top: 12px;
+
+    margin-bottom: 12px;
+
+    padding: 20px 25px;
+
+    text-align: left;
+
+    font-size: 1.15rem;
+
+    line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   CHAPTER BUTTON FOCUS
+   --------------------------------------------------------- */
+
+.chapter:focus {
+    outline: 6px solid #ffff00;
+
+    outline-offset: 5px;
+
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+   --------------------------------------------------------- */
+
+/*
+   Prevent text from becoming too small.
+*/
+
+p,
+li {
+    font-size: 1rem;
+}
+
+
+/*
+   Make links and interactive controls easy to identify.
+*/
+
+button:focus-visible {
+    outline: 6px solid #ffff00;
+
+    outline-offset: 5px;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE PHONE SETTINGS
+   --------------------------------------------------------- */
 
 @media (max-width: 600px) {
+
 
     html {
         font-size: 19px;
     }
 
+
     main {
-        padding: 20px 15px 50px;
+        padding-top: 20px;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+        padding-bottom: 50px;
     }
+
 
     h1 {
         font-size: 2rem;
     }
 
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
+    header p {
+        font-size: 1.15rem;
+    }
+
+
+    /* PLAY / PAUSE */
+
+    #playButton,
+    #pauseButton {
+        min-height: 105px;
+
+        font-size: 1.5rem;
+    }
+
+
+    /* REWIND / FORWARD */
+
     .small-controls {
         display: block;
     }
 
+
     .small-controls button {
+        width: 100%;
+
         min-height: 90px;
+
+        margin-top: 12px;
+
+        margin-bottom: 12px;
+
+        font-size: 1.05rem;
     }
+
+
+    /* SPEED BUTTONS */
+
+    .speed-buttons {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .speed-button {
+        min-height: 80px;
+
+        padding: 12px;
+
+        font-size: 1rem;
+    }
+
+
+    /* CHAPTER BUTTONS */
 
     .chapter {
         min-height: 85px;
-        font-size: 1.1rem;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+        font-size: 1.05rem;
     }
 
+
 }
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 380px) {
+
+
+    html {
+        font-size: 18px;
+    }
+
+
+    main {
+        padding-left: 12px;
+
+        padding-right: 12px;
+    }
+
+
+    .speed-buttons {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .speed-button {
+        min-height: 75px;
+    }
+
+
+    .chapter {
+        min-height: 90px;
+    }
+
+
+}
+
+
+/* =========================================================
+   END OF STYLE SHEET
+   ========================================================= */
