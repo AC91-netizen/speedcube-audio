@@ -20,24 +20,38 @@
 <main>
 
 
+    <!-- =================================================
+         HEADER
+         ================================================= -->
+
     <header>
 
         <h1>Tactile Speedcube</h1>
 
-        <p>Accessible Audio Tutorial</p>
+        <p>
+            Accessible Audio Tutorial
+        </p>
 
     </header>
 
 
 
-    <!-- AUDIO CONTROLS -->
+    <!-- =================================================
+         AUDIO PLAYER
+         ================================================= -->
 
     <section aria-labelledby="player-heading">
+
 
         <h2 id="player-heading">
             Audio controls
         </h2>
 
+
+        <!--
+            The MP3 file must be named:
+            speedcube-tutorial.mp3
+        -->
 
         <audio
             id="audioPlayer"
@@ -48,11 +62,15 @@
                 src="speedcube-tutorial.mp3"
                 type="audio/mpeg">
 
+            Your browser does not support audio playback.
+
         </audio>
 
 
 
-        <!-- PLAY -->
+        <!-- =================================================
+             PLAY
+             ================================================= -->
 
         <button
             type="button"
@@ -65,7 +83,9 @@
 
 
 
-        <!-- PAUSE -->
+        <!-- =================================================
+             PAUSE
+             ================================================= -->
 
         <button
             type="button"
@@ -78,7 +98,9 @@
 
 
 
-        <!-- REWIND / FORWARD -->
+        <!-- =================================================
+             REWIND / FAST FORWARD
+             ================================================= -->
 
         <div class="small-controls">
 
@@ -107,7 +129,9 @@
 
 
 
-        <!-- PLAYBACK SPEED -->
+        <!-- =================================================
+             PLAYBACK SPEED
+             ================================================= -->
 
         <section
             aria-labelledby="speed-heading"
@@ -124,6 +148,7 @@
             </p>
 
 
+
             <div class="speed-buttons">
 
 
@@ -138,6 +163,7 @@
                 </button>
 
 
+
                 <button
                     type="button"
                     class="speed-button"
@@ -147,6 +173,7 @@
                     0.75 times
 
                 </button>
+
 
 
                 <button
@@ -160,6 +187,7 @@
                 </button>
 
 
+
                 <button
                     type="button"
                     class="speed-button"
@@ -169,6 +197,7 @@
                     1.25 times
 
                 </button>
+
 
 
                 <button
@@ -182,6 +211,7 @@
                 </button>
 
 
+
                 <button
                     type="button"
                     class="speed-button"
@@ -191,6 +221,7 @@
                     1.75 times
 
                 </button>
+
 
 
                 <button
@@ -207,6 +238,7 @@
             </div>
 
 
+
             <p
                 id="speedStatus"
                 role="status"
@@ -221,7 +253,9 @@
 
 
 
-        <!-- STATUS -->
+        <!-- =================================================
+             STATUS MESSAGE
+             ================================================= -->
 
         <p
             id="status"
@@ -237,7 +271,9 @@
 
 
 
-    <!-- CHAPTERS -->
+    <!-- =================================================
+         CHAPTERS
+         ================================================= -->
 
     <section aria-labelledby="chapters-heading">
 
@@ -249,13 +285,15 @@
 
         <p>
             Select a chapter to jump to that section.
-            The audio will begin five seconds after you select a chapter.
+            Audio will begin five seconds after selecting a chapter.
         </p>
+
 
 
         <div class="chapters">
 
 
+            <!-- CHAPTER 0 -->
 
             <button
                 type="button"
@@ -269,6 +307,8 @@
 
 
 
+            <!-- CHAPTER 1 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -280,6 +320,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 2 -->
 
             <button
                 type="button"
@@ -293,6 +335,8 @@
 
 
 
+            <!-- CHAPTER 3 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -304,6 +348,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 4 -->
 
             <button
                 type="button"
@@ -317,6 +363,8 @@
 
 
 
+            <!-- CHAPTER 5 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -328,6 +376,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 6 -->
 
             <button
                 type="button"
@@ -341,6 +391,8 @@
 
 
 
+            <!-- CHAPTER 7 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -352,6 +404,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 8 -->
 
             <button
                 type="button"
@@ -365,6 +419,8 @@
 
 
 
+            <!-- CHAPTER 9 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -376,6 +432,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 10 -->
 
             <button
                 type="button"
@@ -389,6 +447,8 @@
 
 
 
+            <!-- CHAPTER 11 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -400,6 +460,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 12 -->
 
             <button
                 type="button"
@@ -413,6 +475,8 @@
 
 
 
+            <!-- CHAPTER 13 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -425,6 +489,8 @@
 
 
 
+            <!-- CHAPTER 14 -->
+
             <button
                 type="button"
                 class="chapter"
@@ -436,6 +502,8 @@
             </button>
 
 
+
+            <!-- CHAPTER 15 -->
 
             <button
                 type="button"
@@ -457,135 +525,183 @@
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
 <script>
 
 
-/* ----------------------------- */
-/* AUDIO ELEMENT */
-/* ----------------------------- */
+/* =========================================================
+   AUDIO ELEMENT
+   ========================================================= */
 
 const audio =
     document.getElementById("audioPlayer");
 
 
-/* ----------------------------- */
-/* MAIN BUTTONS */
-/* ----------------------------- */
+
+/* =========================================================
+   MAIN BUTTONS
+   ========================================================= */
 
 const playButton =
     document.getElementById("playButton");
 
+
 const pauseButton =
     document.getElementById("pauseButton");
 
+
 const rewindButton =
     document.getElementById("rewindButton");
+
 
 const forwardButton =
     document.getElementById("forwardButton");
 
 
-/* ----------------------------- */
-/* STATUS */
-/* ----------------------------- */
+
+/* =========================================================
+   STATUS ELEMENTS
+   ========================================================= */
 
 const status =
     document.getElementById("status");
+
 
 const speedStatus =
     document.getElementById("speedStatus");
 
 
-/* ----------------------------- */
-/* SPEED BUTTONS */
-/* ----------------------------- */
+
+/* =========================================================
+   SPEED BUTTONS
+   ========================================================= */
 
 const speedButtons =
     document.querySelectorAll(".speed-button");
 
 
-/* ----------------------------- */
-/* CHAPTER BUTTONS */
-/* ----------------------------- */
+
+/* =========================================================
+   CHAPTER BUTTONS
+   ========================================================= */
 
 const chapterButtons =
     document.querySelectorAll(".chapter");
 
 
-/* ----------------------------- */
-/* FIVE SECOND DELAY */
-/* ----------------------------- */
+
+/* =========================================================
+   FIVE SECOND TIMER
+   ========================================================= */
 
 let startTimer = null;
 
 
-/* ----------------------------- */
-/* PLAY AFTER FIVE SECONDS */
-/* ----------------------------- */
 
-function playAfterDelay(message) {
+/* =========================================================
+   CANCEL EXISTING TIMER
+   ========================================================= */
 
-
-    /* Cancel any existing timer */
+function cancelTimer() {
 
     if (startTimer !== null) {
 
         clearTimeout(startTimer);
 
-    }
-
-
-    status.textContent =
-        message + " Audio will start in five seconds.";
-
-
-    startTimer = setTimeout(function() {
-
-        audio.play();
-
-        status.textContent =
-            "Playing.";
-
         startTimer = null;
 
-    }, 5000);
+    }
 
 }
 
 
-/* ----------------------------- */
-/* PLAY BUTTON */
-/* ----------------------------- */
+
+/* =========================================================
+   PLAY AFTER FIVE SECOND DELAY
+   ========================================================= */
+
+function playAfterDelay(message) {
+
+
+    /* Cancel any previous timer */
+
+    cancelTimer();
+
+
+    /* Make sure the audio is paused */
+
+    audio.pause();
+
+
+    /* Tell TalkBack what is happening */
+
+    status.textContent =
+        message +
+        " Audio will start in five seconds.";
+
+
+    /* Start five second countdown */
+
+    startTimer =
+        setTimeout(
+            function() {
+
+
+                audio.play();
+
+
+                status.textContent =
+                    "Playing.";
+
+
+                startTimer = null;
+
+
+            },
+            5000
+        );
+
+}
+
+
+
+/* =========================================================
+   PLAY BUTTON
+   ========================================================= */
 
 playButton.addEventListener(
     "click",
     function() {
 
+
         playAfterDelay(
             "Starting the speedcube tutorial."
         );
+
 
     }
 );
 
 
-/* ----------------------------- */
-/* PAUSE BUTTON */
-/* ----------------------------- */
+
+/* =========================================================
+   PAUSE BUTTON
+   ========================================================= */
 
 pauseButton.addEventListener(
     "click",
     function() {
 
 
-        if (startTimer !== null) {
+        /* Cancel any pending countdown */
 
-            clearTimeout(startTimer);
+        cancelTimer();
 
-            startTimer = null;
 
-        }
-
+        /* Pause audio */
 
         audio.pause();
 
@@ -593,27 +709,27 @@ pauseButton.addEventListener(
         status.textContent =
             "Audio paused.";
 
+
     }
 );
 
 
-/* ----------------------------- */
-/* REWIND */
-/* ----------------------------- */
+
+/* =========================================================
+   REWIND 10 SECONDS
+   ========================================================= */
 
 rewindButton.addEventListener(
     "click",
     function() {
 
 
-        if (startTimer !== null) {
+        /* Cancel pending countdown */
 
-            clearTimeout(startTimer);
+        cancelTimer();
 
-            startTimer = null;
 
-        }
-
+        /* Move backwards */
 
         audio.currentTime =
             Math.max(
@@ -625,27 +741,27 @@ rewindButton.addEventListener(
         status.textContent =
             "Rewound 10 seconds.";
 
+
     }
 );
 
 
-/* ----------------------------- */
-/* FAST FORWARD */
-/* ----------------------------- */
+
+/* =========================================================
+   FAST FORWARD 10 SECONDS
+   ========================================================= */
 
 forwardButton.addEventListener(
     "click",
     function() {
 
 
-        if (startTimer !== null) {
+        /* Cancel pending countdown */
 
-            clearTimeout(startTimer);
+        cancelTimer();
 
-            startTimer = null;
 
-        }
-
+        /* Move forwards */
 
         audio.currentTime =
             Math.min(
@@ -657,13 +773,15 @@ forwardButton.addEventListener(
         status.textContent =
             "Fast forwarded 10 seconds.";
 
+
     }
 );
 
 
-/* ----------------------------- */
-/* PLAYBACK SPEED */
-/* ----------------------------- */
+
+/* =========================================================
+   PLAYBACK SPEED BUTTONS
+   ========================================================= */
 
 speedButtons.forEach(
     function(button) {
@@ -674,6 +792,8 @@ speedButtons.forEach(
             function() {
 
 
+                /* Get selected speed */
+
                 const speed =
                     Number(
                         button.getAttribute(
@@ -681,6 +801,8 @@ speedButtons.forEach(
                         )
                     );
 
+
+                /* Change playback speed */
 
                 audio.playbackRate =
                     speed;
@@ -699,12 +821,14 @@ speedButtons.forEach(
                 );
 
 
-                /* Mark current speed */
+                /* Mark selected speed */
 
                 button.classList.add(
                     "selected"
                 );
 
+
+                /* Create TalkBack-friendly message */
 
                 let spokenSpeed;
 
@@ -761,7 +885,8 @@ speedButtons.forEach(
 
                 speedStatus.textContent =
                     "Playback speed is " +
-                    spokenSpeed + ".";
+                    spokenSpeed +
+                    ".";
 
 
             }
@@ -771,9 +896,10 @@ speedButtons.forEach(
 );
 
 
-/* ----------------------------- */
-/* CHAPTER BUTTONS */
-/* ----------------------------- */
+
+/* =========================================================
+   CHAPTER BUTTONS
+   ========================================================= */
 
 chapterButtons.forEach(
     function(button) {
@@ -784,6 +910,27 @@ chapterButtons.forEach(
             function() {
 
 
+                /* -----------------------------------------
+                   STEP 1
+                   CANCEL ANY EXISTING COUNTDOWN
+                   ----------------------------------------- */
+
+                cancelTimer();
+
+
+                /* -----------------------------------------
+                   STEP 2
+                   IMMEDIATELY PAUSE CURRENT AUDIO
+                   ----------------------------------------- */
+
+                audio.pause();
+
+
+                /* -----------------------------------------
+                   STEP 3
+                   GET CHAPTER START TIME
+                   ----------------------------------------- */
+
                 const time =
                     Number(
                         button.getAttribute(
@@ -792,45 +939,49 @@ chapterButtons.forEach(
                     );
 
 
-                /* Cancel existing timer */
-
-                if (startTimer !== null) {
-
-                    clearTimeout(startTimer);
-
-                    startTimer = null;
-
-                }
-
-
-                /* Move to chapter */
+                /* -----------------------------------------
+                   STEP 4
+                   JUMP TO CHAPTER
+                   ----------------------------------------- */
 
                 audio.currentTime =
                     time;
 
 
-                /* Read the chapter name */
+                /* -----------------------------------------
+                   STEP 5
+                   GET CHAPTER NAME
+                   ----------------------------------------- */
 
                 const chapterName =
-                    button.textContent
-                    .replace(
-                        "Chapter",
-                        ""
-                    )
-                    .trim();
+                    button.textContent.trim();
 
+
+                /* -----------------------------------------
+                   STEP 6
+                   TELL TALKBACK
+                   ----------------------------------------- */
 
                 status.textContent =
                     chapterName +
-                    ". Audio will start in five seconds.";
+                    ". Audio paused. " +
+                    "Audio will start in five seconds.";
 
 
-                /* Wait five seconds */
+                /* -----------------------------------------
+                   STEP 7
+                   WAIT FIVE SECONDS
+                   ----------------------------------------- */
 
                 startTimer =
                     setTimeout(
                         function() {
 
+
+                            /* ---------------------------------
+                               STEP 8
+                               START AUDIO
+                               --------------------------------- */
 
                             audio.play();
 
@@ -848,6 +999,7 @@ chapterButtons.forEach(
                         5000
                     );
 
+
             }
         );
 
@@ -855,22 +1007,50 @@ chapterButtons.forEach(
 );
 
 
-/* ----------------------------- */
-/* AUDIO FINISHED */
-/* ----------------------------- */
+
+/* =========================================================
+   AUDIO FINISHED
+   ========================================================= */
 
 audio.addEventListener(
     "ended",
     function() {
 
+
+        cancelTimer();
+
+
         status.textContent =
             "The speedcube tutorial has finished.";
+
+
+    }
+);
+
+
+
+/* =========================================================
+   AUDIO ERROR
+   ========================================================= */
+
+audio.addEventListener(
+    "error",
+    function() {
+
+
+        cancelTimer();
+
+
+        status.textContent =
+            "There was a problem playing the audio.";
+
 
     }
 );
 
 
 </script>
+
 
 </body>
 
