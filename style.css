@@ -9,91 +9,141 @@ html {
 body {
     margin: 0;
     padding: 0;
+
     background: #111111;
     color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
 }
 
 main {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px 60px;
+    margin: auto;
+    padding: 25px 20px 60px;
 }
 
 header {
     text-align: center;
-    padding: 20px 0 30px;
+    padding-bottom: 25px;
 }
 
 h1 {
-    font-size: 2.4rem;
-    margin: 0;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    margin-top: 5px;
+    font-size: 2.3rem;
+    margin-bottom: 5px;
 }
 
 h2 {
     font-size: 1.6rem;
 }
 
-.instructions,
-.chapters {
-    background: #222222;
-    border: 2px solid #ffffff;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-}
-
-.player {
-    text-align: center;
-    padding: 30px 15px;
-    margin-bottom: 25px;
+section {
+    margin-bottom: 35px;
 }
 
 audio {
     width: 100%;
-    margin-bottom: 25px;
+    margin: 15px 0 25px;
 }
+
+
+/* MAIN PLAY AND PAUSE BUTTONS */
 
 button {
     display: block;
+
     width: 100%;
-    min-height: 90px;
+
+    min-height: 100px;
+
     margin: 15px 0;
+
     padding: 20px;
+
     border: 4px solid #ffffff;
+
     border-radius: 15px;
+
     background: #000000;
+
     color: #ffffff;
-    font-size: 1.7rem;
+
+    font-size: 1.5rem;
+
     font-weight: bold;
+
     cursor: pointer;
 }
 
-button:focus,
+
+/* REWIND AND FAST FORWARD */
+
+.small-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.small-controls button {
+    min-height: 80px;
+    font-size: 1.1rem;
+}
+
+
+/* CHAPTER BUTTONS */
+
+.chapter {
+    min-height: 75px;
+
+    text-align: left;
+
+    font-size: 1.15rem;
+
+    padding-left: 25px;
+}
+
+
+/* TALKBACK / KEYBOARD FOCUS */
+
+button:focus {
+    outline: 6px solid #ffff00;
+
+    outline-offset: 5px;
+
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* MOUSE / TOUCH HOVER */
+
 button:hover {
     background: #ffffff;
+
     color: #000000;
-    outline: 5px solid #ffff00;
-    outline-offset: 4px;
 }
 
-li {
-    margin-bottom: 12px;
+
+/* STATUS MESSAGE */
+
+#status {
+    padding: 20px;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-weight: bold;
 }
 
-.subtitle,
-.instructions p,
-.chapters p {
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+/* MOBILE PHONES */
 
 @media (max-width: 600px) {
 
@@ -102,15 +152,24 @@ li {
     }
 
     main {
-        padding: 20px 15px 40px;
+        padding: 20px 15px 50px;
     }
 
     h1 {
         font-size: 2rem;
     }
 
-    button {
-        min-height: 100px;
-        font-size: 1.5rem;
+    .small-controls {
+        display: block;
     }
+
+    .small-controls button {
+        min-height: 90px;
+    }
+
+    .chapter {
+        min-height: 85px;
+        font-size: 1.1rem;
+    }
+
 }
