@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,72 +16,284 @@
 
     <header>
         <h1>Tactile Speedcube</h1>
-        <p class="subtitle">Audio Tutorial</p>
+        <p>Accessible Audio Tutorial</p>
     </header>
 
-    <section class="instructions" aria-labelledby="instructions-heading">
 
-        <h2 id="instructions-heading">Audio tutorial</h2>
+    <!-- AUDIO PLAYER -->
 
-        <p>
-            This tutorial is designed to teach you how to solve the
-            speedcube using touch alone.
-        </p>
+    <section aria-labelledby="player-heading">
 
-        <p>
-            Find the button below and activate it to begin listening.
-        </p>
+        <h2 id="player-heading">
+            Audio controls
+        </h2>
 
-    </section>
+        <audio
+            id="audioPlayer"
+            preload="metadata"
+            aria-label="Tactile Speedcube complete audio tutorial">
 
-    <section class="player" aria-label="Audio player">
+            <source
+                src="speedcube-tutorial.mp3"
+                type="audio/mpeg">
 
-        <audio id="audioPlayer" controls preload="metadata">
-            <source src="speedcube-tutorial.mp3" type="audio/mpeg">
-            Your browser does not support audio playback.
         </audio>
 
-        <button id="playButton" type="button">
+
+        <button
+            type="button"
+            id="playButton"
+            aria-label="Play the speedcube tutorial">
+
             PLAY AUDIO
+
         </button>
 
-        <button id="pauseButton" type="button">
+
+        <button
+            type="button"
+            id="pauseButton"
+            aria-label="Pause the speedcube tutorial">
+
             PAUSE AUDIO
+
         </button>
+
+
+        <div class="small-controls">
+
+            <button
+                type="button"
+                id="rewindButton"
+                aria-label="Rewind the audio 10 seconds">
+
+                REWIND 10 SECONDS
+
+            </button>
+
+
+            <button
+                type="button"
+                id="forwardButton"
+                aria-label="Fast forward the audio 10 seconds">
+
+                FAST FORWARD 10 SECONDS
+
+            </button>
+
+        </div>
+
+
+        <p
+            id="status"
+            role="status"
+            aria-live="polite">
+
+            Audio ready.
+
+        </p>
 
     </section>
 
-    <section class="chapters" aria-labelledby="chapters-heading">
 
-        <h2 id="chapters-heading">Tutorial chapters</h2>
+    <!-- CHAPTERS -->
+
+    <section aria-labelledby="chapters-heading">
+
+        <h2 id="chapters-heading">
+            Tutorial chapters
+        </h2>
 
         <p>
-            The complete tutorial is contained in the audio recording.
-            Use the audio player's controls to pause, rewind or continue.
+            Select a chapter to start the audio from that point.
         </p>
 
-        <ul>
-            <li>Introduction</li>
-            <li>Learning the tactile faces</li>
-            <li>Finding the starting position</li>
-            <li>Understanding a turn</li>
-            <li>The first cross</li>
-            <li>Making the circle cross</li>
-            <li>Solving the circle corners</li>
-            <li>The middle layer</li>
-            <li>The diagonal face</li>
-            <li>Creating the diagonal cross</li>
-            <li>Positioning the diagonal corners</li>
-            <li>Turning the final corners</li>
-            <li>The final edges</li>
-            <li>Checking the speedcube</li>
-            <li>If you lose your orientation</li>
-            <li>Final reminder</li>
-        </ul>
+
+        <div class="chapters">
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="0"
+                aria-label="Chapter 0, Introduction, starting at zero minutes">
+
+                Chapter 0 — Introduction
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="36"
+                aria-label="Chapter 1, Learning Your Cube, starting at 36 seconds">
+
+                Chapter 1 — Learning Your Cube
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="92"
+                aria-label="Chapter 2, Finding the Starting Position, starting at 1 minute 32 seconds">
+
+                Chapter 2 — Finding the Starting Position
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="130"
+                aria-label="Chapter 3, Understanding a Turn, starting at 2 minutes 10 seconds">
+
+                Chapter 3 — Understanding a Turn
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="181"
+                aria-label="Chapter 4, The First Cross, starting at 3 minutes 1 second">
+
+                Chapter 4 — The First Cross
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="250"
+                aria-label="Chapter 5, Making the Circle Cross, starting at 4 minutes 10 seconds">
+
+                Chapter 5 — Making the Circle Cross
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="334"
+                aria-label="Chapter 6, Solving the Circle Corners, starting at 5 minutes 34 seconds">
+
+                Chapter 6 — Solving the Circle Corners
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="410"
+                aria-label="Chapter 7, The Middle Layer, starting at 6 minutes 50 seconds">
+
+                Chapter 7 — The Middle Layer
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="518"
+                aria-label="Chapter 8, The Diagonal Face, starting at 8 minutes 38 seconds">
+
+                Chapter 8 — The Diagonal Face
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="552"
+                aria-label="Chapter 9, Creating the Diagonal Cross, starting at 9 minutes 12 seconds">
+
+                Chapter 9 — Creating the Diagonal Cross
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="593"
+                aria-label="Chapter 10, Positioning the Diagonal Corners, starting at 9 minutes 53 seconds">
+
+                Chapter 10 — Positioning the Diagonal Corners
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="645"
+                aria-label="Chapter 11, Turning the Final Corners, starting at 10 minutes 45 seconds">
+
+                Chapter 11 — Turning the Final Corners
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="708"
+                aria-label="Chapter 12, The Final Edges, starting at 11 minutes 48 seconds">
+
+                Chapter 12 — The Final Edges
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="758"
+                aria-label="Chapter 13, Checking the Speedcube, starting at 12 minutes 38 seconds">
+
+                Chapter 13 — Checking the Speedcube
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="812"
+                aria-label="Chapter 14, If You Lose Your Orientation, starting at 13 minutes 32 seconds">
+
+                Chapter 14 — If You Lose Your Orientation
+
+            </button>
+
+
+            <button
+                type="button"
+                class="chapter"
+                data-time="849"
+                aria-label="Chapter 15, Final Reminder, starting at 14 minutes 9 seconds">
+
+                Chapter 15 — Final Reminder
+
+            </button>
+
+
+        </div>
 
     </section>
 
 </main>
+
 
 <script>
 
@@ -90,15 +303,104 @@ const playButton = document.getElementById("playButton");
 
 const pauseButton = document.getElementById("pauseButton");
 
+const rewindButton = document.getElementById("rewindButton");
+
+const forwardButton = document.getElementById("forwardButton");
+
+const status = document.getElementById("status");
+
+const chapterButtons = document.querySelectorAll(".chapter");
+
+
+
+/* PLAY */
+
 playButton.addEventListener("click", function() {
+
     audio.play();
+
+    status.textContent = "Playing the speedcube tutorial.";
+
 });
 
+
+
+/* PAUSE */
+
 pauseButton.addEventListener("click", function() {
+
     audio.pause();
+
+    status.textContent = "Audio paused.";
+
+});
+
+
+
+/* REWIND 10 SECONDS */
+
+rewindButton.addEventListener("click", function() {
+
+    audio.currentTime = Math.max(
+        0,
+        audio.currentTime - 10
+    );
+
+    status.textContent = "Rewound 10 seconds.";
+
+});
+
+
+
+/* FAST FORWARD 10 SECONDS */
+
+forwardButton.addEventListener("click", function() {
+
+    audio.currentTime = Math.min(
+        audio.duration || Infinity,
+        audio.currentTime + 10
+    );
+
+    status.textContent = "Fast forwarded 10 seconds.";
+
+});
+
+
+
+/* CHAPTER BUTTONS */
+
+chapterButtons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const time = Number(
+            button.getAttribute("data-time")
+        );
+
+        audio.currentTime = time;
+
+        audio.play();
+
+        status.textContent =
+            button.getAttribute("aria-label");
+
+    });
+
+});
+
+
+
+/* AUDIO FINISHED */
+
+audio.addEventListener("ended", function() {
+
+    status.textContent =
+        "The speedcube tutorial has finished.";
+
 });
 
 </script>
 
 </body>
+
 </html>
